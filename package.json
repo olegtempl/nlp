@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -12,12 +12,23 @@
   },
   "keywords": [],
   "author": "oleg_templ <linner_952@mail.ru> (http://www.bear-software.by)",
-  "license": "CC BY-NC-SA 4.0",
+  "license": "",
   "homepage": "https://bitbucket.org/bear_sw/nlp#readme",
   "dependencies": {
-    "parcel-bundler": "^1.9.7"
+  },
+  "jest": {
+    "verbose": true,
+    "bail": true,
+    "collectCoverage": true,
+    "coverageDirectory": "./test/info/",
+    "cacheDirectory": "./test/info/",
+    "notify": true
+
   },
   "devDependencies": {
-    "jest": "^23.4.2"
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.9.7",
+    "babel-preset-flow": "^6.23.0",
+    "jest": "^23.6.0"
   }
 }
