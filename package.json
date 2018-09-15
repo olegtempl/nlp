@@ -7,7 +7,11 @@
     "test": "jest",
     "lint": "eslint ./src/*",
     "build": "parcel build ./src/index.js --out-dir ./",
-    "server": "parcel watch ./src/index.js"
+    "serve": "parcel watch ./src/index.js",
+    "jsdoc": "jsdoc ./src/*.js --destination docs/jsdoc/",
+    "size:files": "pkgfiles",
+    "size:archive": "tarball=\"$(npm pack .)\"; wc -c \"${tarball}\"; tar tvf \"${tarball}\"; rm \"${tarball}\";",
+    "readme-bundler": ""
   },
   "repository": {
     "type": "git",
@@ -22,8 +26,8 @@
     "verbose": true,
     "bail": true,
     "collectCoverage": true,
-    "coverageDirectory": "./test/info/",
-    "cacheDirectory": "./test/info/",
+    "coverageDirectory": "./test/info/coverage/",
+    "cacheDirectory": "./test/info/cache/",
     "notify": true
   },
   "devDependencies": {
@@ -31,7 +35,21 @@
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
+    "jsdoc": "^3.5.5",
     "node-cl-log": "^1.0.3",
-    "parcel-bundler": "^1.9.7"
+    "parcel-bundler": "^1.9.7",
+    "pkgfiles": "^2.3.2",
+    "pre-git": "^3.17.1",
+    "readme-bundler": "^1.0.3"
+  },
+  "config": {
+    "pre-git": {
+      "pre-push": [
+        "npm run size:files"
+      ]
+    }
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
   }
 }
