@@ -14,8 +14,7 @@
   "author": "oleg_templ <linner_952@mail.ru> (http://www.bear-software.by)",
   "license": "",
   "homepage": "https://bitbucket.org/bear_sw/nlp#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "jest": {
     "verbose": true,
     "bail": true,
@@ -23,13 +22,12 @@
     "coverageDirectory": "./test/info/",
     "cacheDirectory": "./test/info/",
     "notify": true
-
   },
   "devDependencies": {
-
     "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.9.7",
     "babel-preset-flow": "^6.23.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "node-cl-log": "^1.0.3",
+    "parcel-bundler": "^1.9.7"
   }
 }
