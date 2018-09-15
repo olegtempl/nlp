@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ./src/*",
+    "build": "parcel build ./src/index.js --out-dir ./",
+    "server": "parcel watch ./src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bear_sw@bitbucket.org/bear_sw/nlp.git"
+    "url": "https://github.com/olegtempl/nlp#readme"
   },
   "keywords": [],
   "author": "oleg_templ <linner_952@mail.ru> (http://www.bear-software.by)",
   "license": "",
-  "homepage": "https://bitbucket.org/bear_sw/nlp#readme",
+  "homepage": "https://github.com/olegtempl/nlp#readme",
   "dependencies": {},
   "jest": {
     "verbose": true,
@@ -24,8 +27,9 @@
     "notify": true
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
+    "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
     "node-cl-log": "^1.0.3",
     "parcel-bundler": "^1.9.7"
