@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+node_js:
+  - 8
+  - 10
+  - node
+before_script:
+  - npm run build
+script: npm test
+after_success:
+  -
+env:
+  global:
+    - FORCE_COLOR=1
+- secure:
