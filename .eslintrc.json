@@ -1,3 +1,8 @@
 {
-    "extends": ["airbnb-base", "plugin:prettier/recommended"]
+  "extends": ["idiomatic/es5", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {},
+  "plugins": ["prettier"]
 }
