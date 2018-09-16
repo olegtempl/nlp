@@ -31,6 +31,11 @@
     "notify": true
   },
   "devDependencies": {
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "figlet": "^1.2.0",
+    "inquirer": "^6.2.0",
+    "minimist": "^1.2.0",
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.81.0",
